@@ -1,0 +1,18 @@
+############Session has started############
+Executed action ToDo.Controllers.HomeController.Index (ToDo) in 56353.7374ms
+Request starting HTTP/1.1 GET http://localhost:52921/js/site.js?v=ViZVBP5v4KCzMyiPf9uLs4Y51L0PKcTxV4unYQjDW14  
+Request finished in 80352.2647ms 200 text/html; charset=utf-8
+Sending file. Request path: '/js/site.js'. Physical path: 'E:\Programming\C# different\some tasks\ToDo(new)\ToDo\wwwroot\js\site.js'
+Request starting HTTP/1.1 GET http://localhost:52921/css/site.css  
+Request starting HTTP/1.1 GET http://localhost:52921/lib/jquery/dist/jquery.js  
+Request finished in 5439.4931ms 200 application/javascript
+Request starting HTTP/1.1 GET http://localhost:52921/lib/bootstrap/dist/js/bootstrap.js  
+The file /lib/jquery/dist/jquery.js was not modified
+Request starting HTTP/1.1 GET http://localhost:52921/lib/bootstrap/dist/css/bootstrap.css  
+The file /lib/bootstrap/dist/js/bootstrap.js was not modified
+Request finished in 5094.9168ms 304 application/javascript
+The file /css/site.css was not modified
+Request finished in 12938.2721ms 304 text/css
+Request finished in 5601.1641ms 304 application/javascript
+The file /lib/bootstrap/dist/css/bootstrap.css was not modified
+Request finished in 14279.5159ms 304 text/css

@@ -1,1 +1,4 @@
-﻿// Write your JavaScript code.
+﻿$(document).ready(function ()
+{
+    alert("hello wolrd");
+});
