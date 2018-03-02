@@ -1,5 +1,18 @@
-﻿@{
-    ViewData["Title"] = "Home Page";
+﻿@using ToDo.Models.ViewModels
+
+@model IEnumerable<CategoryModel>
+@{
+    ViewData["Title"] = "Index";
 }
 
-<p>Hi bro</p>
+<h3>Select Category</h3>
+
+<div class="col-lg-2 col-md-3 col-xs-6">
+    @Html.DropDownList("selectCategory", new SelectList(Model, "Id", "Name"), new { @class="selectpicker form-control", id="", data_live_search="true" })
+</div>
+
+<div id="loadList" class="btn btn-primary">
+    Load
+</div>
+
+<div id="listContainer"></div>
