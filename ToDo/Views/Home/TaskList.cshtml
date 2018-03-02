@@ -19,9 +19,12 @@
             <td>@task.TaskId</td>
             <td>@task.Name</td>
             <td>
+                @{  string glyphiconUpId = "up_" + task.TaskId + "_" + task.Priority,
+                           glyphiconDownId = "down_" + task.TaskId + "_" + task.Priority;
+                 }
                 @task.Priority
-                <span class="glyphicon glyphicon-arrow-up" data-toggle="tooltip" title="Move up"></span>
-                <span class="glyphicon glyphicon-arrow-down" data-toggle="tooltip" title="Move down"></span>
+                <span id="@glyphiconUpId" class="glyphicon glyphicon-arrow-up" data-toggle="tooltip" title="Move up"></span>
+                <span id="@glyphiconDownId" class="glyphicon glyphicon-arrow-down" data-toggle="tooltip" title="Move down"></span>
             </td>
             <td>
                 @{ string statusId = "statusName_" + task.TaskId; }

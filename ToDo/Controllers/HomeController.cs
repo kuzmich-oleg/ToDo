@@ -19,6 +19,16 @@ namespace ToDo.Controllers
             SwapPriorities();
         }
 
+        private void SwapPriorities()
+        {
+            int start = 1;
+            foreach (Task task in _context.Tasks.OrderBy(t => t.Priority))
+                task.Priority = start++;
+            _context.SaveChanges();
+
+            _viewModel.NextPriority = start;
+        }
+
         public IActionResult Index()
         {
             var categories = _context.Categories.Select(c => new CategoryModel(c.CategoryId, c.Name)).ToList();
@@ -78,14 +88,20 @@ namespace ToDo.Controllers
             return RedirectToAction("GetList", new { categoryId = selectedCategory });
         }
 
-        private void SwapPriorities()
+        [HttpPost]
+        public IActionResult ChangePriority(int taskId, int priority, string direction, int selectedCategory)
         {
-            int start = 1;
-            foreach (Task task in _context.Tasks.OrderBy(t => t.Priority))
-                task.Priority = start++;
+            Task taskToMove = _context.Tasks.First(t => t.TaskId == taskId);
+            int priorityDirection = priority + ((direction == "up") ? -1 : 1);
+            Task taskNext = _context.Tasks.First(t => t.Priority == priorityDirection);
+
+            taskNext.Priority = priority;
+            taskToMove.Priority = priorityDirection;
+
+            _context.UpdateRange(taskToMove, taskNext);
             _context.SaveChanges();
 
-            _viewModel.NextPriority = start;
+            return RedirectToAction("GetList", new { categoryId = selectedCategory });
         }
     }
 }

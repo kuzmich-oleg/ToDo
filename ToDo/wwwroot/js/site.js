@@ -1,14 +1,11 @@
-﻿$(document).ready(function ()
-{
+﻿$(document).ready(function () {
     var selectedCategory = $("select[name='selectCategory']");
 
-    $("#loadList").on("click", function ()
-    {
+    $("#loadList").on("click", function () {
         $.ajax({
             url: "home/getlist?categoryid=" + selectedCategory.val(),
             dataType: "html",
-            success: function (html)
-            {
+            success: function (html) {
                 $("#listContainer").html(html);
                 LoadListScripts();
 
@@ -17,18 +14,15 @@
         });
     });
 
-    function LoadListScripts()
-    {
+    function LoadListScripts() {
         $("[data-toggle='tooltip']").tooltip();
 
-        //there u can use js classes
-        $("#send").on("click", function ()
-        {
+        $("#send").on("click", function () {
             var taskName = $("input[name='taskName']");
 
             var urlAddress = "name=" + taskName.val() + "&priority=" + $("input[name='priority']").val() + "&status=" +
-                             $("select[name='statusId']").val() + "&category=" + $("select[name='categoryId']").val() +
-                             "&selectedcategory=" + selectedCategory.val();
+                $("select[name='statusId']").val() + "&category=" + $("select[name='categoryId']").val() +
+                "&selectedcategory=" + selectedCategory.val();
 
             if (taskName.val())
                 $.ajax({
@@ -44,8 +38,7 @@
                 alert("Fill all fields to add new task");
         });
 
-        $(".glyphicon-remove").on("click", function (event)
-        {
+        $(".glyphicon-remove").on("click", function (event) {
             var eventTarget = event.target;
             var taskId = eventTarget.getAttribute("id").split("_")[1];
 
@@ -60,17 +53,15 @@
             });
         });
 
-        $("select[name='statusName']").on("change", function (e)
-        {
+        $("select[name='statusName']").on("change", function (e) {
             var eventTarget = e.target;
             changeStatus(eventTarget.getAttribute("id"));
         });
 
-        function changeStatus(taskId)
-        {
+        function changeStatus(taskId) {
             $.ajax({
                 url: "/home/changestatus?taskid="
-                    + taskId.split("_")[1] + "&statusid=" + $("#" + taskId).val() + "&selectedcategory=" + selectedCategory.val(),
+                + taskId.split("_")[1] + "&statusid=" + $("#" + taskId).val() + "&selectedcategory=" + selectedCategory.val(),
                 type: "post",
                 dataType: "html",
                 success: function (html) {
@@ -78,6 +69,28 @@
                     LoadListScripts();
                 }
             });
+        }
+
+        $(".glyphicon-arrow-up, .glyphicon-arrow-down").on("click", function (event) {
+            changePriority(event.target.getAttribute("id"));
+        });
+
+        function changePriority(taskId) {
+            var params = taskId.split("_");
+
+            if (params[2] == 1 && params[0] == "up" || params[2] == $("input[name='priority']").val() - 1 && params[0] == "down")
+                alert("chose another task to move");
+            else
+                $.ajax({
+                    url: "/home/changepriority?taskid=" + params[1] + "&priority=" + params[2] +
+                    "&direction=" + params[0] + "&selectedcategory=" + selectedCategory.val(),
+                    type: "post",
+                    dataType: "html",
+                    success: function (html) {
+                        $("#listContainer").html(html);
+                        LoadListScripts();
+                    }
+                });
         }
     }
 });

@@ -1,88 +1,20 @@
 ############Session has started############
-Executing PartialViewResult, running view at path /Views/Home/TaskList.cshtml.
-Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
-PRAGMA foreign_keys=ON;
-Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
-SELECT "t"."TaskId", "t"."CategoryId", "t"."Name", "t"."Priority", "t"."StatusId", "t.Status"."StatusId", "t.Status"."Name", "t.Category"."CategoryId", "t.Category"."Name"
-FROM "Tasks" AS "t"
-INNER JOIN "Statuses" AS "t.Status" ON "t"."StatusId" = "t.Status"."StatusId"
-INNER JOIN "Categories" AS "t.Category" ON "t"."CategoryId" = "t.Category"."CategoryId"
-ORDER BY "t"."Priority"
-Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
-SELECT "s"."StatusId", "s"."Name"
-FROM "Statuses" AS "s"
-Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
-SELECT "s"."StatusId", "s"."Name"
-FROM "Statuses" AS "s"
-Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
-SELECT "s"."StatusId", "s"."Name"
-FROM "Statuses" AS "s"
-Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
-SELECT "s"."StatusId", "s"."Name"
-FROM "Statuses" AS "s"
-Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
-SELECT "s"."StatusId", "s"."Name"
-FROM "Statuses" AS "s"
-Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
-PRAGMA foreign_keys=ON;
-Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
-SELECT "s"."StatusId", "s"."Name"
-FROM "Statuses" AS "s"
-Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
-PRAGMA foreign_keys=ON;
-Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
-SELECT "c"."CategoryId", "c"."Name"
-FROM "Categories" AS "c"
-Executed action ToDo.Controllers.HomeController.GetList (ToDo) in 5222.7481ms
-Request finished in 5422.7469ms 200 text/html; charset=utf-8
-Request starting HTTP/1.1 GET http://localhost:52921/  
+Executing RedirectResult, redirecting to /home/GetList?categoryId=0.
+Executed action ToDo.Controllers.HomeController.ChangePriority (ToDo) in 4089.3565ms
+Request finished in 4620.6883ms 302 
+Request starting HTTP/1.1 GET http://localhost:52921/home/GetList?categoryId=0  
 Entity Framework Core 2.0.1-rtm-125 initialized 'ToDoContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite' with options: None
 Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
 PRAGMA foreign_keys=ON;
-Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
-SELECT "t"."TaskId", "t"."CategoryId", "t"."Name", "t"."Priority", "t"."StatusId"
-FROM "Tasks" AS "t"
-ORDER BY "t"."Priority"
-Executing action method ToDo.Controllers.HomeController.Index (ToDo) with arguments ((null)) - ModelState is Valid
-Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
-PRAGMA foreign_keys=ON;
-Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
-SELECT "c"."CategoryId", "c"."Name"
-FROM "Categories" AS "c"
-Executing ViewResult, running view at path /Views/Home/Index.cshtml.
-Executed action ToDo.Controllers.HomeController.Index (ToDo) in 2356.0036ms
-Request starting HTTP/1.1 GET http://localhost:52921/lib/jquery/dist/jquery.js  
-Request starting HTTP/1.1 GET http://localhost:52921/css/site.css  
-Request starting HTTP/1.1 GET http://localhost:52921/lib/bootstrap/dist/js/bootstrap.js  
-Request starting HTTP/1.1 GET http://localhost:52921/js/site.js?v=xajiTM5tUAbOYXhP_r1jap5pmzuIfKlQqgetu0IVzV4  
-Request starting HTTP/1.1 GET http://localhost:52921/lib/bootstrap/dist/css/bootstrap.css  
-Request finished in 3673.2461ms 200 text/html; charset=utf-8
-Sending file. Request path: '/css/site.css'. Physical path: 'E:\Programming\C# different\some tasks\ToDo(new)\ToDo\wwwroot\css\site.css'
-Sending file. Request path: '/lib/bootstrap/dist/js/bootstrap.js'. Physical path: 'E:\Programming\C# different\some tasks\ToDo(new)\ToDo\wwwroot\lib\bootstrap\dist\js\bootstrap.js'
-Sending file. Request path: '/js/site.js'. Physical path: 'E:\Programming\C# different\some tasks\ToDo(new)\ToDo\wwwroot\js\site.js'
-Sending file. Request path: '/lib/bootstrap/dist/css/bootstrap.css'. Physical path: 'E:\Programming\C# different\some tasks\ToDo(new)\ToDo\wwwroot\lib\bootstrap\dist\css\bootstrap.css'
-Request finished in 3839.6976ms 200 application/javascript
-Request finished in 3666.9711ms 200 text/css
-Request finished in 4110.3874ms 200 application/javascript
-Request finished in 4176.8576ms 200 text/css
-Sending file. Request path: '/lib/jquery/dist/jquery.js'. Physical path: 'E:\Programming\C# different\some tasks\ToDo(new)\ToDo\wwwroot\lib\jquery\dist\jquery.js'
-Request starting HTTP/1.1 GET http://localhost:52921/lib/bootstrap/dist/css/bootstrap.css.map  
-Sending file. Request path: '/lib/bootstrap/dist/css/bootstrap.css.map'. Physical path: 'E:\Programming\C# different\some tasks\ToDo(new)\ToDo\wwwroot\lib\bootstrap\dist\css\bootstrap.css.map'
-Request finished in 6841.8267ms 200 application/javascript
-Request finished in 3459.2857ms 200 text/plain
-Request starting HTTP/1.1 GET http://localhost:52921/home/getlist?categoryid=0  
-Entity Framework Core 2.0.1-rtm-125 initialized 'ToDoContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite' with options: None
-Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
-PRAGMA foreign_keys=ON;
-Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
 SELECT "t"."TaskId", "t"."CategoryId", "t"."Name", "t"."Priority", "t"."StatusId"
 FROM "Tasks" AS "t"
 ORDER BY "t"."Priority"
 Executing action method ToDo.Controllers.HomeController.GetList (ToDo) with arguments (0) - ModelState is Valid
 Executing PartialViewResult, running view at path /Views/Home/TaskList.cshtml.
-Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
 PRAGMA foreign_keys=ON;
-Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
 SELECT "t"."TaskId", "t"."CategoryId", "t"."Name", "t"."Priority", "t"."StatusId", "t.Status"."StatusId", "t.Status"."Name", "t.Category"."CategoryId", "t.Category"."Name"
 FROM "Tasks" AS "t"
 INNER JOIN "Statuses" AS "t.Status" ON "t"."StatusId" = "t.Status"."StatusId"
@@ -110,15 +42,12 @@ SELECT "s"."StatusId", "s"."Name"
 FROM "Statuses" AS "s"
 Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
 PRAGMA foreign_keys=ON;
-Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
 SELECT "c"."CategoryId", "c"."Name"
 FROM "Categories" AS "c"
-Executed action ToDo.Controllers.HomeController.GetList (ToDo) in 2834.9719ms
-Request finished in 3342.9546ms 200 text/html; charset=utf-8
-Request starting HTTP/1.1 GET http://localhost:52921/lib/bootstrap/dist/fonts/glyphicons-halflings-regular.woff2  
-Sending file. Request path: '/lib/bootstrap/dist/fonts/glyphicons-halflings-regular.woff2'. Physical path: 'E:\Programming\C# different\some tasks\ToDo(new)\ToDo\wwwroot\lib\bootstrap\dist\fonts\glyphicons-halflings-regular.woff2'
-Request finished in 791.1878ms 200 font/woff2
-Request starting HTTP/1.1 GET http://localhost:52921/  
+Executed action ToDo.Controllers.HomeController.GetList (ToDo) in 2176.8698ms
+Request finished in 2679.8339ms 200 text/html; charset=utf-8
+Request starting HTTP/1.1 POST http://localhost:52921/home/changepriority?taskid=6&priority=2&direction=down&selectedcategory=0  0
 Entity Framework Core 2.0.1-rtm-125 initialized 'ToDoContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite' with options: None
 Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
 PRAGMA foreign_keys=ON;
@@ -126,202 +55,35 @@ Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30'
 SELECT "t"."TaskId", "t"."CategoryId", "t"."Name", "t"."Priority", "t"."StatusId"
 FROM "Tasks" AS "t"
 ORDER BY "t"."Priority"
-Executing action method ToDo.Controllers.HomeController.Index (ToDo) with arguments ((null)) - ModelState is Valid
+Executing action method ToDo.Controllers.HomeController.ChangePriority (ToDo) with arguments (6, 2, down, 0) - ModelState is Valid
 Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
 PRAGMA foreign_keys=ON;
-Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
-SELECT "c"."CategoryId", "c"."Name"
-FROM "Categories" AS "c"
-Executing ViewResult, running view at path /Views/Home/Index.cshtml.
-Executed action ToDo.Controllers.HomeController.Index (ToDo) in 2956.5339ms
-Request starting HTTP/1.1 GET http://localhost:52921/css/site.css  
-Request finished in 3757.4667ms 200 text/html; charset=utf-8
-The file /css/site.css was not modified
-Request finished in 1607.1261ms 304 text/css
-Request starting HTTP/1.1 GET http://localhost:52921/  
-Entity Framework Core 2.0.1-rtm-125 initialized 'ToDoContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite' with options: None
-Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
-PRAGMA foreign_keys=ON;
-Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+Executed DbCommand (1ms) [Parameters=[@__taskId_0='?'], CommandType='Text', CommandTimeout='30']
 SELECT "t"."TaskId", "t"."CategoryId", "t"."Name", "t"."Priority", "t"."StatusId"
 FROM "Tasks" AS "t"
-ORDER BY "t"."Priority"
-Executing action method ToDo.Controllers.HomeController.Index (ToDo) with arguments ((null)) - ModelState is Valid
+WHERE "t"."TaskId" = @__taskId_0
+LIMIT 1
 Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
 PRAGMA foreign_keys=ON;
-Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
-SELECT "c"."CategoryId", "c"."Name"
-FROM "Categories" AS "c"
-Executing ViewResult, running view at path /Views/Home/Index.cshtml.
-Executed action ToDo.Controllers.HomeController.Index (ToDo) in 2486.265ms
-Request finished in 3629.6643ms 200 text/html; charset=utf-8
-Request starting HTTP/1.1 GET http://localhost:52921/css/site.css  
-The file /css/site.css was not modified
-Request finished in 466.5744ms 304 text/css
-Request starting HTTP/1.1 GET http://localhost:52921/  
-Entity Framework Core 2.0.1-rtm-125 initialized 'ToDoContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite' with options: None
-Executed DbCommand (6ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
-PRAGMA foreign_keys=ON;
-Executed DbCommand (4ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+Executed DbCommand (1ms) [Parameters=[@__priorityDirection_0='?'], CommandType='Text', CommandTimeout='30']
 SELECT "t"."TaskId", "t"."CategoryId", "t"."Name", "t"."Priority", "t"."StatusId"
 FROM "Tasks" AS "t"
-ORDER BY "t"."Priority"
-Executing action method ToDo.Controllers.HomeController.Index (ToDo) with arguments ((null)) - ModelState is Valid
-Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
-PRAGMA foreign_keys=ON;
-Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
-SELECT "c"."CategoryId", "c"."Name"
-FROM "Categories" AS "c"
-Executing ViewResult, running view at path /Views/Home/Index.cshtml.
-Executed action ToDo.Controllers.HomeController.Index (ToDo) in 4515.3266ms
-Request starting HTTP/1.1 GET http://localhost:52921/css/site.css  
-Request finished in 5911.4138ms 200 text/html; charset=utf-8
-The file /css/site.css was not modified
-Request finished in 2875.7157ms 304 text/css
-Request starting HTTP/1.1 GET http://localhost:52921/  
-Entity Framework Core 2.0.1-rtm-125 initialized 'ToDoContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite' with options: None
-Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
-PRAGMA foreign_keys=ON;
-Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
-SELECT "t"."TaskId", "t"."CategoryId", "t"."Name", "t"."Priority", "t"."StatusId"
-FROM "Tasks" AS "t"
-ORDER BY "t"."Priority"
-Executing action method ToDo.Controllers.HomeController.Index (ToDo) with arguments ((null)) - ModelState is Valid
-Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
-PRAGMA foreign_keys=ON;
-Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
-SELECT "c"."CategoryId", "c"."Name"
-FROM "Categories" AS "c"
-Executing ViewResult, running view at path /Views/Home/Index.cshtml.
-Executed action ToDo.Controllers.HomeController.Index (ToDo) in 3013.3287ms
-Request finished in 3585.1916ms 200 text/html; charset=utf-8
-Request starting HTTP/1.1 GET http://localhost:52921/css/site.css  
-The file /css/site.css was not modified
-Request finished in 1871.9664ms 304 text/css
-Request starting HTTP/1.1 GET http://localhost:52921/  
-Entity Framework Core 2.0.1-rtm-125 initialized 'ToDoContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite' with options: None
+WHERE "t"."Priority" = @__priorityDirection_0
+LIMIT 1
 Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
 PRAGMA foreign_keys=ON;
-Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
-SELECT "t"."TaskId", "t"."CategoryId", "t"."Name", "t"."Priority", "t"."StatusId"
-FROM "Tasks" AS "t"
-ORDER BY "t"."Priority"
-Executing action method ToDo.Controllers.HomeController.Index (ToDo) with arguments ((null)) - ModelState is Valid
-Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
-PRAGMA foreign_keys=ON;
-Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
-SELECT "c"."CategoryId", "c"."Name"
-FROM "Categories" AS "c"
-Executing ViewResult, running view at path /Views/Home/Index.cshtml.
-Executed action ToDo.Controllers.HomeController.Index (ToDo) in 2956.5784ms
-Request finished in 3659.9443ms 200 text/html; charset=utf-8
-Request starting HTTP/1.1 GET http://localhost:52921/  
-Entity Framework Core 2.0.1-rtm-125 initialized 'ToDoContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite' with options: None
-Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
-PRAGMA foreign_keys=ON;
-Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
-SELECT "t"."TaskId", "t"."CategoryId", "t"."Name", "t"."Priority", "t"."StatusId"
-FROM "Tasks" AS "t"
-ORDER BY "t"."Priority"
-Executing action method ToDo.Controllers.HomeController.Index (ToDo) with arguments ((null)) - ModelState is Valid
-Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
-PRAGMA foreign_keys=ON;
-Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
-SELECT "c"."CategoryId", "c"."Name"
-FROM "Categories" AS "c"
-Executing ViewResult, running view at path /Views/Home/Index.cshtml.
-Executed action ToDo.Controllers.HomeController.Index (ToDo) in 3816.4ms
-Request finished in 5472.9141ms 200 text/html; charset=utf-8
-Request starting HTTP/1.1 GET http://localhost:52921/css/site.css  
-The file /css/site.css was not modified
-Request finished in 2318.1631ms 304 text/css
-Request starting HTTP/1.1 GET http://localhost:52921/  
-Entity Framework Core 2.0.1-rtm-125 initialized 'ToDoContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite' with options: None
-Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
-PRAGMA foreign_keys=ON;
-Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
-SELECT "t"."TaskId", "t"."CategoryId", "t"."Name", "t"."Priority", "t"."StatusId"
-FROM "Tasks" AS "t"
-ORDER BY "t"."Priority"
-Executing action method ToDo.Controllers.HomeController.Index (ToDo) with arguments ((null)) - ModelState is Valid
-Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
-PRAGMA foreign_keys=ON;
-Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
-SELECT "c"."CategoryId", "c"."Name"
-FROM "Categories" AS "c"
-Executing ViewResult, running view at path /Views/Home/Index.cshtml.
-Executed action ToDo.Controllers.HomeController.Index (ToDo) in 2994.0998ms
-Request finished in 4278.6902ms 200 text/html; charset=utf-8
-Request starting HTTP/1.1 GET http://localhost:52921/  
-Entity Framework Core 2.0.1-rtm-125 initialized 'ToDoContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite' with options: None
-Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
-PRAGMA foreign_keys=ON;
-Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
-SELECT "t"."TaskId", "t"."CategoryId", "t"."Name", "t"."Priority", "t"."StatusId"
-FROM "Tasks" AS "t"
-ORDER BY "t"."Priority"
-Executing action method ToDo.Controllers.HomeController.Index (ToDo) with arguments ((null)) - ModelState is Valid
-Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
-PRAGMA foreign_keys=ON;
-Executed DbCommand (6ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
-SELECT "c"."CategoryId", "c"."Name"
-FROM "Categories" AS "c"
-Executing ViewResult, running view at path /Views/Home/Index.cshtml.
-Executed action ToDo.Controllers.HomeController.Index (ToDo) in 2984.5525ms
-Request starting HTTP/1.1 GET http://localhost:52921/js/site.js?v=xajiTM5tUAbOYXhP_r1jap5pmzuIfKlQqgetu0IVzV4  
-Request finished in 3646.4828ms 200 text/html; charset=utf-8
-The file /js/site.js was not modified
-Request finished in 752.6857ms 304 application/javascript
-Request starting HTTP/1.1 GET http://localhost:52921/favicon.ico  
-Sending file. Request path: '/favicon.ico'. Physical path: 'E:\Programming\C# different\some tasks\ToDo(new)\ToDo\wwwroot\favicon.ico'
-Request finished in 85.7353ms 200 image/x-icon
-Request starting HTTP/1.1 GET http://localhost:52921/  
-Entity Framework Core 2.0.1-rtm-125 initialized 'ToDoContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite' with options: None
-Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
-PRAGMA foreign_keys=ON;
-Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
-SELECT "t"."TaskId", "t"."CategoryId", "t"."Name", "t"."Priority", "t"."StatusId"
-FROM "Tasks" AS "t"
-ORDER BY "t"."Priority"
-Executing action method ToDo.Controllers.HomeController.Index (ToDo) with arguments ((null)) - ModelState is Valid
-Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
-PRAGMA foreign_keys=ON;
-Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
-SELECT "c"."CategoryId", "c"."Name"
-FROM "Categories" AS "c"
-Executing ViewResult, running view at path /Views/Home/Index.cshtml.
-Executed action ToDo.Controllers.HomeController.Index (ToDo) in 2190.0298ms
-Request finished in 2552.3443ms 200 text/html; charset=utf-8
-Request starting HTTP/1.1 GET http://localhost:52921/css/site.css  
-Sending file. Request path: '/css/site.css'. Physical path: 'E:\Programming\C# different\some tasks\ToDo(new)\ToDo\wwwroot\css\site.css'
-Request finished in 203.9772ms 200 text/css
-Request starting HTTP/1.1 GET http://localhost:52921/favicon.ico  
-Sending file. Request path: '/favicon.ico'. Physical path: 'E:\Programming\C# different\some tasks\ToDo(new)\ToDo\wwwroot\favicon.ico'
-Request finished in 58.6738ms 200 image/x-icon
-Request starting HTTP/1.1 GET http://localhost:52921/  
-Entity Framework Core 2.0.1-rtm-125 initialized 'ToDoContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite' with options: None
-Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
-PRAGMA foreign_keys=ON;
-Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
-SELECT "t"."TaskId", "t"."CategoryId", "t"."Name", "t"."Priority", "t"."StatusId"
-FROM "Tasks" AS "t"
-ORDER BY "t"."Priority"
-Executing action method ToDo.Controllers.HomeController.Index (ToDo) with arguments ((null)) - ModelState is Valid
-Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
-PRAGMA foreign_keys=ON;
-Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
-SELECT "c"."CategoryId", "c"."Name"
-FROM "Categories" AS "c"
-Executing ViewResult, running view at path /Views/Home/Index.cshtml.
-Executed action ToDo.Controllers.HomeController.Index (ToDo) in 1895.6875ms
-Request finished in 2176.1288ms 200 text/html; charset=utf-8
-Request starting HTTP/1.1 GET http://localhost:52921/css/site.css  
-The file /css/site.css was not modified
-Request finished in 112.3979ms 304 text/css
-Request starting HTTP/1.1 GET http://localhost:52921/favicon.ico  
-Sending file. Request path: '/favicon.ico'. Physical path: 'E:\Programming\C# different\some tasks\ToDo(new)\ToDo\wwwroot\favicon.ico'
-Request finished in 161.628ms 200 image/x-icon
-Request starting HTTP/1.1 GET http://localhost:52921/home/getlist?categoryid=0  
+Executed DbCommand (3ms) [Parameters=[@p4='?', @p0='?', @p1='?', @p2='?', @p3='?'], CommandType='Text', CommandTimeout='30']
+UPDATE "Tasks" SET "CategoryId" = @p0, "Name" = @p1, "Priority" = @p2, "StatusId" = @p3
+WHERE "TaskId" = @p4;
+SELECT changes();
+Executed DbCommand (0ms) [Parameters=[@p4='?', @p0='?', @p1='?', @p2='?', @p3='?'], CommandType='Text', CommandTimeout='30']
+UPDATE "Tasks" SET "CategoryId" = @p0, "Name" = @p1, "Priority" = @p2, "StatusId" = @p3
+WHERE "TaskId" = @p4;
+SELECT changes();
+Executing RedirectResult, redirecting to /home/GetList?categoryId=0.
+Executed action ToDo.Controllers.HomeController.ChangePriority (ToDo) in 3782.4156ms
+Request finished in 4305.16ms 302 
+Request starting HTTP/1.1 GET http://localhost:52921/home/GetList?categoryId=0  
 Entity Framework Core 2.0.1-rtm-125 initialized 'ToDoContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite' with options: None
 Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
 PRAGMA foreign_keys=ON;
@@ -356,17 +118,17 @@ SELECT "s"."StatusId", "s"."Name"
 FROM "Statuses" AS "s"
 Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
 PRAGMA foreign_keys=ON;
-Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
 SELECT "s"."StatusId", "s"."Name"
 FROM "Statuses" AS "s"
 Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
 PRAGMA foreign_keys=ON;
-Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
 SELECT "c"."CategoryId", "c"."Name"
 FROM "Categories" AS "c"
-Executed action ToDo.Controllers.HomeController.GetList (ToDo) in 983.9556ms
-Request finished in 1181.5629ms 200 text/html; charset=utf-8
-Request starting HTTP/1.1 GET http://localhost:52921/home/getlist?categoryid=1  
+Executed action ToDo.Controllers.HomeController.GetList (ToDo) in 4182.9997ms
+Request finished in 4830.2122ms 200 text/html; charset=utf-8
+Request starting HTTP/1.1 POST http://localhost:52921/home/changepriority?taskid=18&priority=5&direction=up&selectedcategory=2  0
 Entity Framework Core 2.0.1-rtm-125 initialized 'ToDoContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite' with options: None
 Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
 PRAGMA foreign_keys=ON;
@@ -374,40 +136,39 @@ Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30'
 SELECT "t"."TaskId", "t"."CategoryId", "t"."Name", "t"."Priority", "t"."StatusId"
 FROM "Tasks" AS "t"
 ORDER BY "t"."Priority"
-Executing action method ToDo.Controllers.HomeController.GetList (ToDo) with arguments (1) - ModelState is Valid
-Executing PartialViewResult, running view at path /Views/Home/TaskList.cshtml.
+Executing action method ToDo.Controllers.HomeController.ChangePriority (ToDo) with arguments (18, 5, up, 2) - ModelState is Valid
 Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
 PRAGMA foreign_keys=ON;
-Executed DbCommand (6ms) [Parameters=[@__categoryId_0='?'], CommandType='Text', CommandTimeout='30']
-SELECT "t"."TaskId", "t"."CategoryId", "t"."Name", "t"."Priority", "t"."StatusId", "t.Status"."StatusId", "t.Status"."Name", "t.Category"."CategoryId", "t.Category"."Name"
+Executed DbCommand (1ms) [Parameters=[@__taskId_0='?'], CommandType='Text', CommandTimeout='30']
+SELECT "t"."TaskId", "t"."CategoryId", "t"."Name", "t"."Priority", "t"."StatusId"
 FROM "Tasks" AS "t"
-INNER JOIN "Statuses" AS "t.Status" ON "t"."StatusId" = "t.Status"."StatusId"
-INNER JOIN "Categories" AS "t.Category" ON "t"."CategoryId" = "t.Category"."CategoryId"
-WHERE "t"."CategoryId" = @__categoryId_0
-ORDER BY "t"."Priority"
-Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
-SELECT "s"."StatusId", "s"."Name"
-FROM "Statuses" AS "s"
-Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
-SELECT "s"."StatusId", "s"."Name"
-FROM "Statuses" AS "s"
+WHERE "t"."TaskId" = @__taskId_0
+LIMIT 1
 Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
 PRAGMA foreign_keys=ON;
-Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
-SELECT "s"."StatusId", "s"."Name"
-FROM "Statuses" AS "s"
+Executed DbCommand (1ms) [Parameters=[@__priorityDirection_0='?'], CommandType='Text', CommandTimeout='30']
+SELECT "t"."TaskId", "t"."CategoryId", "t"."Name", "t"."Priority", "t"."StatusId"
+FROM "Tasks" AS "t"
+WHERE "t"."Priority" = @__priorityDirection_0
+LIMIT 1
 Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
 PRAGMA foreign_keys=ON;
-Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
-SELECT "c"."CategoryId", "c"."Name"
-FROM "Categories" AS "c"
-Executed action ToDo.Controllers.HomeController.GetList (ToDo) in 728.6433ms
-Request finished in 809.316ms 200 text/html; charset=utf-8
-Request starting HTTP/1.1 GET http://localhost:52921/home/getlist?categoryid=2  
+Executed DbCommand (70ms) [Parameters=[@p4='?', @p0='?', @p1='?', @p2='?', @p3='?'], CommandType='Text', CommandTimeout='30']
+UPDATE "Tasks" SET "CategoryId" = @p0, "Name" = @p1, "Priority" = @p2, "StatusId" = @p3
+WHERE "TaskId" = @p4;
+SELECT changes();
+Executed DbCommand (0ms) [Parameters=[@p4='?', @p0='?', @p1='?', @p2='?', @p3='?'], CommandType='Text', CommandTimeout='30']
+UPDATE "Tasks" SET "CategoryId" = @p0, "Name" = @p1, "Priority" = @p2, "StatusId" = @p3
+WHERE "TaskId" = @p4;
+SELECT changes();
+Executing RedirectResult, redirecting to /home/GetList?categoryId=2.
+Executed action ToDo.Controllers.HomeController.ChangePriority (ToDo) in 4266.0562ms
+Request finished in 4387.9387ms 302 
+Request starting HTTP/1.1 GET http://localhost:52921/home/GetList?categoryId=2  
 Entity Framework Core 2.0.1-rtm-125 initialized 'ToDoContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite' with options: None
 Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
 PRAGMA foreign_keys=ON;
-Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
 SELECT "t"."TaskId", "t"."CategoryId", "t"."Name", "t"."Priority", "t"."StatusId"
 FROM "Tasks" AS "t"
 ORDER BY "t"."Priority"
@@ -425,7 +186,404 @@ ORDER BY "t"."Priority"
 Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
 SELECT "s"."StatusId", "s"."Name"
 FROM "Statuses" AS "s"
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT "s"."StatusId", "s"."Name"
+FROM "Statuses" AS "s"
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+PRAGMA foreign_keys=ON;
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT "s"."StatusId", "s"."Name"
+FROM "Statuses" AS "s"
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+PRAGMA foreign_keys=ON;
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT "c"."CategoryId", "c"."Name"
+FROM "Categories" AS "c"
+Executed action ToDo.Controllers.HomeController.GetList (ToDo) in 3786.8582ms
+Request finished in 4621.6336ms 200 text/html; charset=utf-8
+Request starting HTTP/1.1 GET http://localhost:52921/home/getlist?categoryid=0  
+Entity Framework Core 2.0.1-rtm-125 initialized 'ToDoContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite' with options: None
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+PRAGMA foreign_keys=ON;
 Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT "t"."TaskId", "t"."CategoryId", "t"."Name", "t"."Priority", "t"."StatusId"
+FROM "Tasks" AS "t"
+ORDER BY "t"."Priority"
+Executing action method ToDo.Controllers.HomeController.GetList (ToDo) with arguments (0) - ModelState is Valid
+Executing PartialViewResult, running view at path /Views/Home/TaskList.cshtml.
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+PRAGMA foreign_keys=ON;
+Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT "t"."TaskId", "t"."CategoryId", "t"."Name", "t"."Priority", "t"."StatusId", "t.Status"."StatusId", "t.Status"."Name", "t.Category"."CategoryId", "t.Category"."Name"
+FROM "Tasks" AS "t"
+INNER JOIN "Statuses" AS "t.Status" ON "t"."StatusId" = "t.Status"."StatusId"
+INNER JOIN "Categories" AS "t.Category" ON "t"."CategoryId" = "t.Category"."CategoryId"
+ORDER BY "t"."Priority"
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT "s"."StatusId", "s"."Name"
+FROM "Statuses" AS "s"
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT "s"."StatusId", "s"."Name"
+FROM "Statuses" AS "s"
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT "s"."StatusId", "s"."Name"
+FROM "Statuses" AS "s"
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT "s"."StatusId", "s"."Name"
+FROM "Statuses" AS "s"
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT "s"."StatusId", "s"."Name"
+FROM "Statuses" AS "s"
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+PRAGMA foreign_keys=ON;
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT "s"."StatusId", "s"."Name"
+FROM "Statuses" AS "s"
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+PRAGMA foreign_keys=ON;
+Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT "c"."CategoryId", "c"."Name"
+FROM "Categories" AS "c"
+Executed action ToDo.Controllers.HomeController.GetList (ToDo) in 10585.7341ms
+Request finished in 12153.3563ms 200 text/html; charset=utf-8
+Request starting HTTP/1.1 GET http://localhost:52921/home/getlist?categoryid=3  
+Entity Framework Core 2.0.1-rtm-125 initialized 'ToDoContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite' with options: None
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+PRAGMA foreign_keys=ON;
+Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT "t"."TaskId", "t"."CategoryId", "t"."Name", "t"."Priority", "t"."StatusId"
+FROM "Tasks" AS "t"
+ORDER BY "t"."Priority"
+Executing action method ToDo.Controllers.HomeController.GetList (ToDo) with arguments (3) - ModelState is Valid
+Executing PartialViewResult, running view at path /Views/Home/TaskList.cshtml.
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+PRAGMA foreign_keys=ON;
+Executed DbCommand (1ms) [Parameters=[@__categoryId_0='?'], CommandType='Text', CommandTimeout='30']
+SELECT "t"."TaskId", "t"."CategoryId", "t"."Name", "t"."Priority", "t"."StatusId", "t.Status"."StatusId", "t.Status"."Name", "t.Category"."CategoryId", "t.Category"."Name"
+FROM "Tasks" AS "t"
+INNER JOIN "Statuses" AS "t.Status" ON "t"."StatusId" = "t.Status"."StatusId"
+INNER JOIN "Categories" AS "t.Category" ON "t"."CategoryId" = "t.Category"."CategoryId"
+WHERE "t"."CategoryId" = @__categoryId_0
+ORDER BY "t"."Priority"
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT "s"."StatusId", "s"."Name"
+FROM "Statuses" AS "s"
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+PRAGMA foreign_keys=ON;
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT "s"."StatusId", "s"."Name"
+FROM "Statuses" AS "s"
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+PRAGMA foreign_keys=ON;
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT "c"."CategoryId", "c"."Name"
+FROM "Categories" AS "c"
+Executed action ToDo.Controllers.HomeController.GetList (ToDo) in 1034.6432ms
+Request finished in 1231.3053ms 200 text/html; charset=utf-8
+Request starting HTTP/1.1 GET http://localhost:52921/home/getlist?categoryid=2  
+Entity Framework Core 2.0.1-rtm-125 initialized 'ToDoContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite' with options: None
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+PRAGMA foreign_keys=ON;
+Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT "t"."TaskId", "t"."CategoryId", "t"."Name", "t"."Priority", "t"."StatusId"
+FROM "Tasks" AS "t"
+ORDER BY "t"."Priority"
+Executing action method ToDo.Controllers.HomeController.GetList (ToDo) with arguments (2) - ModelState is Valid
+Executing PartialViewResult, running view at path /Views/Home/TaskList.cshtml.
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+PRAGMA foreign_keys=ON;
+Executed DbCommand (1ms) [Parameters=[@__categoryId_0='?'], CommandType='Text', CommandTimeout='30']
+SELECT "t"."TaskId", "t"."CategoryId", "t"."Name", "t"."Priority", "t"."StatusId", "t.Status"."StatusId", "t.Status"."Name", "t.Category"."CategoryId", "t.Category"."Name"
+FROM "Tasks" AS "t"
+INNER JOIN "Statuses" AS "t.Status" ON "t"."StatusId" = "t.Status"."StatusId"
+INNER JOIN "Categories" AS "t.Category" ON "t"."CategoryId" = "t.Category"."CategoryId"
+WHERE "t"."CategoryId" = @__categoryId_0
+ORDER BY "t"."Priority"
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT "s"."StatusId", "s"."Name"
+FROM "Statuses" AS "s"
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT "s"."StatusId", "s"."Name"
+FROM "Statuses" AS "s"
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+PRAGMA foreign_keys=ON;
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT "s"."StatusId", "s"."Name"
+FROM "Statuses" AS "s"
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+PRAGMA foreign_keys=ON;
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT "c"."CategoryId", "c"."Name"
+FROM "Categories" AS "c"
+Executed action ToDo.Controllers.HomeController.GetList (ToDo) in 2899.355ms
+Request finished in 2997.8921ms 200 text/html; charset=utf-8
+Request starting HTTP/1.1 POST http://localhost:52921/home/changepriority?taskid=6&priority=3&direction=down&selectedcategory=2  0
+Entity Framework Core 2.0.1-rtm-125 initialized 'ToDoContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite' with options: None
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+PRAGMA foreign_keys=ON;
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT "t"."TaskId", "t"."CategoryId", "t"."Name", "t"."Priority", "t"."StatusId"
+FROM "Tasks" AS "t"
+ORDER BY "t"."Priority"
+Executing action method ToDo.Controllers.HomeController.ChangePriority (ToDo) with arguments (6, 3, down, 2) - ModelState is Valid
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+PRAGMA foreign_keys=ON;
+Executed DbCommand (1ms) [Parameters=[@__taskId_0='?'], CommandType='Text', CommandTimeout='30']
+SELECT "t"."TaskId", "t"."CategoryId", "t"."Name", "t"."Priority", "t"."StatusId"
+FROM "Tasks" AS "t"
+WHERE "t"."TaskId" = @__taskId_0
+LIMIT 1
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+PRAGMA foreign_keys=ON;
+Executed DbCommand (2ms) [Parameters=[@__priorityDirection_0='?'], CommandType='Text', CommandTimeout='30']
+SELECT "t"."TaskId", "t"."CategoryId", "t"."Name", "t"."Priority", "t"."StatusId"
+FROM "Tasks" AS "t"
+WHERE "t"."Priority" = @__priorityDirection_0
+LIMIT 1
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+PRAGMA foreign_keys=ON;
+Executed DbCommand (5ms) [Parameters=[@p4='?', @p0='?', @p1='?', @p2='?', @p3='?'], CommandType='Text', CommandTimeout='30']
+UPDATE "Tasks" SET "CategoryId" = @p0, "Name" = @p1, "Priority" = @p2, "StatusId" = @p3
+WHERE "TaskId" = @p4;
+SELECT changes();
+Executed DbCommand (0ms) [Parameters=[@p4='?', @p0='?', @p1='?', @p2='?', @p3='?'], CommandType='Text', CommandTimeout='30']
+UPDATE "Tasks" SET "CategoryId" = @p0, "Name" = @p1, "Priority" = @p2, "StatusId" = @p3
+WHERE "TaskId" = @p4;
+SELECT changes();
+Executing RedirectResult, redirecting to /home/GetList?categoryId=2.
+Executed action ToDo.Controllers.HomeController.ChangePriority (ToDo) in 1492.116ms
+Request finished in 2001.0718ms 302 
+Request starting HTTP/1.1 GET http://localhost:52921/home/GetList?categoryId=2  
+Entity Framework Core 2.0.1-rtm-125 initialized 'ToDoContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite' with options: None
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+PRAGMA foreign_keys=ON;
+Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT "t"."TaskId", "t"."CategoryId", "t"."Name", "t"."Priority", "t"."StatusId"
+FROM "Tasks" AS "t"
+ORDER BY "t"."Priority"
+Executing action method ToDo.Controllers.HomeController.GetList (ToDo) with arguments (2) - ModelState is Valid
+Executing PartialViewResult, running view at path /Views/Home/TaskList.cshtml.
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+PRAGMA foreign_keys=ON;
+Executed DbCommand (1ms) [Parameters=[@__categoryId_0='?'], CommandType='Text', CommandTimeout='30']
+SELECT "t"."TaskId", "t"."CategoryId", "t"."Name", "t"."Priority", "t"."StatusId", "t.Status"."StatusId", "t.Status"."Name", "t.Category"."CategoryId", "t.Category"."Name"
+FROM "Tasks" AS "t"
+INNER JOIN "Statuses" AS "t.Status" ON "t"."StatusId" = "t.Status"."StatusId"
+INNER JOIN "Categories" AS "t.Category" ON "t"."CategoryId" = "t.Category"."CategoryId"
+WHERE "t"."CategoryId" = @__categoryId_0
+ORDER BY "t"."Priority"
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT "s"."StatusId", "s"."Name"
+FROM "Statuses" AS "s"
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT "s"."StatusId", "s"."Name"
+FROM "Statuses" AS "s"
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+PRAGMA foreign_keys=ON;
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT "s"."StatusId", "s"."Name"
+FROM "Statuses" AS "s"
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+PRAGMA foreign_keys=ON;
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT "c"."CategoryId", "c"."Name"
+FROM "Categories" AS "c"
+Executed action ToDo.Controllers.HomeController.GetList (ToDo) in 2521.3345ms
+Request finished in 2699.9238ms 200 text/html; charset=utf-8
+Request starting HTTP/1.1 GET http://localhost:52921/home/getlist?categoryid=3  
+Entity Framework Core 2.0.1-rtm-125 initialized 'ToDoContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite' with options: None
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+PRAGMA foreign_keys=ON;
+Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT "t"."TaskId", "t"."CategoryId", "t"."Name", "t"."Priority", "t"."StatusId"
+FROM "Tasks" AS "t"
+ORDER BY "t"."Priority"
+Executing action method ToDo.Controllers.HomeController.GetList (ToDo) with arguments (3) - ModelState is Valid
+Executing PartialViewResult, running view at path /Views/Home/TaskList.cshtml.
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+PRAGMA foreign_keys=ON;
+Executed DbCommand (1ms) [Parameters=[@__categoryId_0='?'], CommandType='Text', CommandTimeout='30']
+SELECT "t"."TaskId", "t"."CategoryId", "t"."Name", "t"."Priority", "t"."StatusId", "t.Status"."StatusId", "t.Status"."Name", "t.Category"."CategoryId", "t.Category"."Name"
+FROM "Tasks" AS "t"
+INNER JOIN "Statuses" AS "t.Status" ON "t"."StatusId" = "t.Status"."StatusId"
+INNER JOIN "Categories" AS "t.Category" ON "t"."CategoryId" = "t.Category"."CategoryId"
+WHERE "t"."CategoryId" = @__categoryId_0
+ORDER BY "t"."Priority"
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT "s"."StatusId", "s"."Name"
+FROM "Statuses" AS "s"
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+PRAGMA foreign_keys=ON;
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT "s"."StatusId", "s"."Name"
+FROM "Statuses" AS "s"
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+PRAGMA foreign_keys=ON;
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT "c"."CategoryId", "c"."Name"
+FROM "Categories" AS "c"
+Executed action ToDo.Controllers.HomeController.GetList (ToDo) in 3861.0079ms
+Request finished in 4604.8481ms 200 text/html; charset=utf-8
+Request starting HTTP/1.1 DELETE http://localhost:52921/home/delete?taskid=18&selectedcategory=3  
+Entity Framework Core 2.0.1-rtm-125 initialized 'ToDoContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite' with options: None
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+PRAGMA foreign_keys=ON;
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT "t"."TaskId", "t"."CategoryId", "t"."Name", "t"."Priority", "t"."StatusId"
+FROM "Tasks" AS "t"
+ORDER BY "t"."Priority"
+Executing action method ToDo.Controllers.HomeController.Delete (ToDo) with arguments (18, 3) - ModelState is Valid
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+PRAGMA foreign_keys=ON;
+Executed DbCommand (1ms) [Parameters=[@__taskId_0='?'], CommandType='Text', CommandTimeout='30']
+SELECT "t"."TaskId", "t"."CategoryId", "t"."Name", "t"."Priority", "t"."StatusId"
+FROM "Tasks" AS "t"
+WHERE "t"."TaskId" = @__taskId_0
+LIMIT 1
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+PRAGMA foreign_keys=ON;
+Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT "t"."TaskId", "t"."CategoryId", "t"."Name", "t"."Priority", "t"."StatusId"
+FROM "Tasks" AS "t"
+ORDER BY "t"."Priority"
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+PRAGMA foreign_keys=ON;
+Executed DbCommand (4ms) [Parameters=[@p0='?'], CommandType='Text', CommandTimeout='30']
+DELETE FROM "Tasks"
+WHERE "TaskId" = @p0;
+SELECT changes();
+Executing RedirectResult, redirecting to /home/GetList?categoryId=3.
+Executed action ToDo.Controllers.HomeController.Delete (ToDo) in 2875.6987ms
+Request finished in 3328.3456ms 302 
+Request starting HTTP/1.1 DELETE http://localhost:52921/home/GetList?categoryId=3  
+Entity Framework Core 2.0.1-rtm-125 initialized 'ToDoContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite' with options: None
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+PRAGMA foreign_keys=ON;
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT "t"."TaskId", "t"."CategoryId", "t"."Name", "t"."Priority", "t"."StatusId"
+FROM "Tasks" AS "t"
+ORDER BY "t"."Priority"
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+PRAGMA foreign_keys=ON;
+Executed DbCommand (3ms) [Parameters=[@p1='?', @p0='?'], CommandType='Text', CommandTimeout='30']
+UPDATE "Tasks" SET "Priority" = @p0
+WHERE "TaskId" = @p1;
+SELECT changes();
+Executed DbCommand (0ms) [Parameters=[@p1='?', @p0='?'], CommandType='Text', CommandTimeout='30']
+UPDATE "Tasks" SET "Priority" = @p0
+WHERE "TaskId" = @p1;
+SELECT changes();
+Executing action method ToDo.Controllers.HomeController.GetList (ToDo) with arguments (3) - ModelState is Valid
+Executing PartialViewResult, running view at path /Views/Home/TaskList.cshtml.
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+PRAGMA foreign_keys=ON;
+Executed DbCommand (3ms) [Parameters=[@__categoryId_0='?'], CommandType='Text', CommandTimeout='30']
+SELECT "t"."TaskId", "t"."CategoryId", "t"."Name", "t"."Priority", "t"."StatusId", "t.Status"."StatusId", "t.Status"."Name", "t.Category"."CategoryId", "t.Category"."Name"
+FROM "Tasks" AS "t"
+INNER JOIN "Statuses" AS "t.Status" ON "t"."StatusId" = "t.Status"."StatusId"
+INNER JOIN "Categories" AS "t.Category" ON "t"."CategoryId" = "t.Category"."CategoryId"
+WHERE "t"."CategoryId" = @__categoryId_0
+ORDER BY "t"."Priority"
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+PRAGMA foreign_keys=ON;
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT "s"."StatusId", "s"."Name"
+FROM "Statuses" AS "s"
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+PRAGMA foreign_keys=ON;
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT "c"."CategoryId", "c"."Name"
+FROM "Categories" AS "c"
+Executed action ToDo.Controllers.HomeController.GetList (ToDo) in 753.888ms
+Request finished in 847.3417ms 200 text/html; charset=utf-8
+Request starting HTTP/1.1 PUT http://localhost:52921/home/add?name=Buy%20some%20milk&priority=5&status=1&category=3&selectedcategory=3  0
+Entity Framework Core 2.0.1-rtm-125 initialized 'ToDoContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite' with options: None
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+PRAGMA foreign_keys=ON;
+Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT "t"."TaskId", "t"."CategoryId", "t"."Name", "t"."Priority", "t"."StatusId"
+FROM "Tasks" AS "t"
+ORDER BY "t"."Priority"
+Executing action method ToDo.Controllers.HomeController.Add (ToDo) with arguments (Buy some milk, 5, 1, 3, 3) - ModelState is Valid
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+PRAGMA foreign_keys=ON;
+Executed DbCommand (44ms) [Parameters=[@p0='?', @p1='?', @p2='?', @p3='?'], CommandType='Text', CommandTimeout='30']
+INSERT INTO "Tasks" ("CategoryId", "Name", "Priority", "StatusId")
+VALUES (@p0, @p1, @p2, @p3);
+SELECT "TaskId"
+FROM "Tasks"
+WHERE changes() = 1 AND "TaskId" = last_insert_rowid();
+Executing RedirectResult, redirecting to /home/GetList?categoryId=3.
+Executed action ToDo.Controllers.HomeController.Add (ToDo) in 5153.9971ms
+Request finished in 7237.3486ms 302 
+Request starting HTTP/1.1 PUT http://localhost:52921/home/GetList?categoryId=3  0
+Entity Framework Core 2.0.1-rtm-125 initialized 'ToDoContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite' with options: None
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+PRAGMA foreign_keys=ON;
+Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT "t"."TaskId", "t"."CategoryId", "t"."Name", "t"."Priority", "t"."StatusId"
+FROM "Tasks" AS "t"
+ORDER BY "t"."Priority"
+Executing action method ToDo.Controllers.HomeController.GetList (ToDo) with arguments (3) - ModelState is Valid
+Executing PartialViewResult, running view at path /Views/Home/TaskList.cshtml.
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+PRAGMA foreign_keys=ON;
+Executed DbCommand (1ms) [Parameters=[@__categoryId_0='?'], CommandType='Text', CommandTimeout='30']
+SELECT "t"."TaskId", "t"."CategoryId", "t"."Name", "t"."Priority", "t"."StatusId", "t.Status"."StatusId", "t.Status"."Name", "t.Category"."CategoryId", "t.Category"."Name"
+FROM "Tasks" AS "t"
+INNER JOIN "Statuses" AS "t.Status" ON "t"."StatusId" = "t.Status"."StatusId"
+INNER JOIN "Categories" AS "t.Category" ON "t"."CategoryId" = "t.Category"."CategoryId"
+WHERE "t"."CategoryId" = @__categoryId_0
+ORDER BY "t"."Priority"
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT "s"."StatusId", "s"."Name"
+FROM "Statuses" AS "s"
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+PRAGMA foreign_keys=ON;
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT "s"."StatusId", "s"."Name"
+FROM "Statuses" AS "s"
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+PRAGMA foreign_keys=ON;
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT "c"."CategoryId", "c"."Name"
+FROM "Categories" AS "c"
+Executed action ToDo.Controllers.HomeController.GetList (ToDo) in 7506.7052ms
+Request finished in 11274.4305ms 200 text/html; charset=utf-8
+Request starting HTTP/1.1 GET http://localhost:52921/css/site.css  
+The file /css/site.css was not modified
+Request finished in 1390.2238ms 304 text/css
+Request starting HTTP/1.1 GET http://localhost:52921/home/getlist?categoryid=0  
+Entity Framework Core 2.0.1-rtm-125 initialized 'ToDoContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite' with options: None
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+PRAGMA foreign_keys=ON;
+Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT "t"."TaskId", "t"."CategoryId", "t"."Name", "t"."Priority", "t"."StatusId"
+FROM "Tasks" AS "t"
+ORDER BY "t"."Priority"
+Executing action method ToDo.Controllers.HomeController.GetList (ToDo) with arguments (0) - ModelState is Valid
+Executing PartialViewResult, running view at path /Views/Home/TaskList.cshtml.
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+PRAGMA foreign_keys=ON;
+Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT "t"."TaskId", "t"."CategoryId", "t"."Name", "t"."Priority", "t"."StatusId", "t.Status"."StatusId", "t.Status"."Name", "t.Category"."CategoryId", "t.Category"."Name"
+FROM "Tasks" AS "t"
+INNER JOIN "Statuses" AS "t.Status" ON "t"."StatusId" = "t.Status"."StatusId"
+INNER JOIN "Categories" AS "t.Category" ON "t"."CategoryId" = "t.Category"."CategoryId"
+ORDER BY "t"."Priority"
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT "s"."StatusId", "s"."Name"
+FROM "Statuses" AS "s"
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT "s"."StatusId", "s"."Name"
+FROM "Statuses" AS "s"
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT "s"."StatusId", "s"."Name"
+FROM "Statuses" AS "s"
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT "s"."StatusId", "s"."Name"
+FROM "Statuses" AS "s"
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
 SELECT "s"."StatusId", "s"."Name"
 FROM "Statuses" AS "s"
 Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
@@ -438,5 +596,5 @@ PRAGMA foreign_keys=ON;
 Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
 SELECT "c"."CategoryId", "c"."Name"
 FROM "Categories" AS "c"
-Executed action ToDo.Controllers.HomeController.GetList (ToDo) in 672.4043ms
-Request finished in 794.1559ms 200 text/html; charset=utf-8
+Executed action ToDo.Controllers.HomeController.GetList (ToDo) in 2264.7934ms
+Request finished in 2636.0592ms 200 text/html; charset=utf-8
